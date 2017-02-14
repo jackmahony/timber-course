@@ -1,14 +1,1 @@
-{% extends "base.twig" %}
-
-{% block content %}
-	<div class="content-wrapper">
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<h1>{{post.title}}</h1>
-				<div class="article-body">
-					{{post.content}}
-				</div>
-			</section>
-		</article>
-	</div><!-- /content-wrapper -->
-{% endblock %}
+{% extends "base.twig" %}{% block content %}<nav id="topnav"><div class="row"><div class="small-12 columns"><div class="cont-1"><h1>This is the middle container</h1></div></div></div><div class="row"><div class="small-12 columns"><div class="cont-2"><h1>This is the bottom container</h1></div></div></div></nav><section id="next"><div class="row"><div class="small-12 columns"><div class="next-section"><h1>This is the next section</h1></div></div></div></section>{% endblock %}

@@ -1,0 +1,8 @@
+%nav#menu
+  .row{data-equalizer: "menu"}
+    %ul.menu.text-right
+      {% for item in menu.get_items %}
+        %li{class: "{{item.classes | join(' ')}}"}
+          %a{href: "{{item.link}}"}
+            {{item.title}}
+      {% endfor %}

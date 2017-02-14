@@ -1,0 +1,50 @@
+@import url(../fonts/gilroy/stylesheet.css)
+
+// Header Commons
+=sans
+  font-family: 'gilroyregular', sans-serif
+  font-weight: 300
+
+=sans-bold
+  font-family: 'gilroybold', sans-serif
+
+=sans-bold-italic
+  font-family: 'gilroyblack_italic', sans-serif
+
+=serif
+  font-family: 'Georgia', serif
+  font-weight: 300
+
+// Headers
+h1, h2, h3
+  +sans-bold-italic
+  text-transform: uppercase
+  line-height: 1em
+
+h2
+  margin-bottom: 2rem
+  color: $navy
+
+  &.mark
+    position: relative
+    display: inline-block
+
+    &::after
+      content: url('../img/logo-mark.svg')
+      position: relative
+      bottom: 0
+      margin-left: 1rem
+
+h4
+  +sans-bold
+  color: $navy
+
+p, li
+  color: $navy
+  font-size: rem-calc(18)
+
+  &.large
+    +sans-bold
+
+  &.no-margin
+    margin-bottom: 0px

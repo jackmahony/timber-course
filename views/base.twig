@@ -1,43 +1,18 @@
-{% block html_head %}
-	{% include 'html-header.twig' %}
-	{% block head %}
-	{% endblock %}
-	</head>
-{% endblock %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta charset="{{site.charset}}" /><title>{% if wp_title %}{{ wp_title }} - {{ site.name }}{% else %}{{ site.name }}{% endif %}</title><meta content="{{ site.name }}" name="description" /><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><meta content="width=device-width, initial-scale=1.0" name="viewport" /><link rel="pingback" />{{function('wp_head')}}{% block head %}{% endblock %}<link href="{{theme.link}}/assets/stylesheets/core.css" media="screen" rel="stylesheet" type="text/css" /><link href="{{theme.link}}/bower_components/foundation-sites/dist/css/foundation.min.css" media="screen" rel="stylesheet" type="text/css" /></head><body class="{{body_class}}" data-template="base.twig">{% block content %}{% endblock %}{% block footer %}{% endblock %}<scripts><script src="{{theme.link}}/bower_components/foundation-sites/dist/js/foundation.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).foundation();+
 
-	<body class="{{body_class}}" data-template="base.twig">
-		<header class="site-header">
-			{% block header %}
-				<div class="wrapper">
-					<h1 class="site-logo" role="banner">
-						<a class="site-logo-link" href="{{site.link}}" rel="home">{{site.name}}</a>
-					</h1>
-					{% include 'partials/nav.twig' %}
-				</div>
-			{% endblock %}
-		</header>
 
-		<main role="main" class="site-main">
-			<div class="wrapper {{sidebar_class}}">
-				{% block content %}
-					Sorry, no content
-				{% endblock %}
-			</div>
-			{% if sidebar %}
-				<aside class="main-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
-		</main>
 
-		<footer class="site-footer">
-			{% block footer %}
-				<div class="wrapper">
-					{% include 'footer.twig' %}
-				</div>
-			{% endblock %}
-		</footer>
-		{{ function('wp_footer') }}
+//]]>
+</script>
+<script src="{{theme.link}}/bower_components/wow/dist/wow.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+new WOW().init();
 
-	</body>
-</html>
+//]]>
+</script>
+{% block scripts %}{% endblock %}</scripts></body></html>

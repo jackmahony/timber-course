@@ -1,0 +1,1 @@
+<nav id="menu"><div data-equalizer="menu" class="row"><ul class="menu text-right">{% for item in menu.get_items %}<li class="{{item.classes | join(' ')}}"><a href="{{item.link}}">{{item.title}}</a></li>{% endfor %}</ul></div></nav>
